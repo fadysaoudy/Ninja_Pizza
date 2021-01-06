@@ -18,8 +18,9 @@ Route::get('/', function () {
 });
 Route::get('/pizzas', function () {
     
-    $pizza= ['type' => 'pepperoni', 
-    'base' => 'tomato sauce',
-    'price'=>10];
-    return view('pizzas',$pizza);
+    $pizzas=[ ['type' => 'pepperoni', 'base' => 'tomato sauce','price'=>21],
+        ['type' => 'Veggie', 'base' => 'tomato sauce', 'price' => 13],
+        ['type' => 'BBQ', 'base' => 'BBQ sauce', 'price' => 11],
+        ['type' => 'Super Supprime', 'base' => 'Special Sauce +tomato sauce', 'price' => 13], ];
+    return view('pizzas',['pizzas'=>$pizzas]);
 });
